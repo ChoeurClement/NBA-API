@@ -3,3 +3,129 @@
     padding: 0;
     margin: 0;
 }
+
+header{
+    background-color: #2c3e50;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+aside{
+    background-color: #7f8c8d;
+    padding: 1rem;
+    display: flex;
+}
+
+article p{
+    padding: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+input{
+    font-size:2rem;
+    padding:1rem;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+input:focus{ 
+    outline:none; 
+}
+
+#resultAPIAccueil {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#resultAPIAccueil .card{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#resultAPIAccueil .card .icon {
+    width: 100%;
+    height: 100%;
+    background: grey;
+    transition: 0.7s;
+    z-index: 1;
+}
+
+#resultAPIAccueil .card .face {
+    width: 100%;
+    height: 300px;
+    transition: 0.5s;
+}
+
+#resultAPIAccueil .card .face.face1 {
+    position: relative;
+    background: #bdc3c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+#resultAPIAccueil .card:hover .face.face1{
+    background: #95a5a6;
+    transform: translateY(0px);
+}
+
+#resultAPIAccueil .card .face.face1 .content {
+    opacity: 1;
+    transition: 1s;
+}
+
+#resultAPIAccueil .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+#resultAPIAccueil .card .face.face1 .content img{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.7s;
+    max-width: 40%;
+}
+
+#resultAPIAccueil .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px #95a5a6;
+    transform: translateY(-200px);
+}
+
+#resultAPIAccueil .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+#resultAPIAccueil .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
+
+#resultAPIAccueil .card .face.face2 .content h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #414141;
+} 
