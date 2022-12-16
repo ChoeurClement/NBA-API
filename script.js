@@ -52,7 +52,7 @@ document.getElementById("myBtn").addEventListener("click", function(e) {
             contenu += '<div class="face face1">';
             contenu += '<div class="content">';
             contenu += '<div class="icon">';
-            contenu += '<img src="images/' + reponse.data[i].abbreviation + '.png">';
+            contenu += '<a href="resultat.html?equipe='+ reponse.data[i].id +'"><img src="images/' + reponse.data[i].abbreviation + '.png"></a>';
             contenu += '</div></div></div>';
             contenu += '<div class="face face2">';
             contenu += '<div class="content">';
@@ -60,27 +60,6 @@ document.getElementById("myBtn").addEventListener("click", function(e) {
             contenu += '<p>Conference : ' + reponse.data[i].conference + '</p>';
             contenu += '</div></div></div>';
             contenuPage.innerHTML += contenu;
-            }
-        }
-    });
-}) ;
-
-// API -> Resultat au click sur une equipe
-document.getElementById("demo").addEventListener("click", function(e) {
-    let equipe = window.location.href;
-    equipe = equipe.substring(equipe.indexOf('=') + 1);
-
-    // Définition du endPoint avec l'id de l'équipe de en paramètres
-    let endPoint = 'https://www.balldontlie.io/api/v1/games?seasons[]=2022&team_ids[]=' + equipe;
-
-    ajaxGet(endPoint, function (reponse) {
-        let contenu;
-        for(let i = 0; i < 30; i++){
-            if(reponse.data[i].full_name.search(search) == -1){
-                contenu = 'Aucune équipe ne corresponds à la recherche.'
-            }else{
-                contenu = '<ul>';
-                contenu += '<li></li>';
             }
         }
     });
